@@ -138,10 +138,10 @@ testFramework.test("Simulate guess works correctly", () => {
     testFramework.assertEqual(bot.simulateGuess("CRANE", "CRANE"), "GGGGG");
     
     // Test partial match
-    testFramework.assertEqual(bot.simulateGuess("ADIEU", "CRANE"), "BYGBB");
+    testFramework.assertEqual(bot.simulateGuess("ADIEU", "CRANE"), "YBBYB");
     
     // Test with repeated letters
-    testFramework.assertEqual(bot.simulateGuess("ABACK", "ADIEU"), "GBBBG");
+    testFramework.assertEqual(bot.simulateGuess("ABACK", "ADIEU"), "GBBBB");
 });
 
 // Critical bug tests - ASSAY scenario
