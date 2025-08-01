@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Wordle Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Automatic Wordle Bot</h1>
+
+        <div class="strategy-info">
+            <h3>🎯 Smart Bot Strategy</h3>
+            <p><strong>Advanced Wordle AI with adaptive strategy:</strong></p>
+            <ul>
+                <li><strong>ADIEU</strong> - Optimal starter covering 4 vowels + D</li>
+                <li><strong>Intelligent Analysis</strong> - Uses letter frequency and position constraints</li>
+                <li><strong>Strategic Elimination</strong> - Picks words that eliminate the most possibilities</li>
+                <li><strong>Smart Guessing</strong> - Switches to likely answers when possibilities are low</li>
+                <li><strong>Adaptive Learning</strong> - Considers all green, yellow, and gray letter information</li>
+            </ul>
+            <p><em>This bot makes intelligent decisions based on remaining possibilities and information theory!</em></p>
+        </div>
+
+        <div class="input-section">
+            <h2>Enter Today's Wordle Answer</h2>
+            <input type="text" id="targetWord" class="word-input" placeholder="CRANE" maxlength="5"
+                onkeyup="this.value = this.value.toUpperCase()" onkeypress="if(event.key==='Enter') solveWordle()">
+            <br>
+            <button class="btn" onclick="solveWordle()" id="solveBtn">🚀 Let Bot Solve It!</button>
+            <button class="btn" onclick="resetGame()" style="background: linear-gradient(145deg, #f44336, #d32f2f);">🔄 Reset</button>
+        </div>
+
+        <div id="gameBoard" class="game-board">
+            <h3>🎮 Bot Playing...</h3>
+            <div id="debugOutput" class="debug-output"></div>
+            <div id="attempts"></div>
+            <div class="loading" id="loadingText">Thinking...</div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="final-score" id="finalScore"></div>
+            <div class="share-text" id="shareText"></div>
+            <button class="btn" onclick="copyToClipboard()">📋 Copy Result</button>
+            <button class="btn" onclick="resetGame()" style="background: linear-gradient(145deg, #2196f3, #1976d2);">🎯 Try Another Word</button>
+        </div>
+    </div>
+
+    <script src="wordle-bot.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
