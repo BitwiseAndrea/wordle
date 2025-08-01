@@ -1,0 +1,25 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "An intelligent Wordle bot that uses adaptive strategy and information theory to solve Wordle puzzles.",
+  "main": "main.js",
+  "scripts": {
+    "test": "bash run-tests.sh",
+    "test:browser": "open tests.html",
+    "deploy": "wrangler deploy",
+    "deploy:dev": "wrangler deploy --env dev",
+    "dev": "wrangler dev",
+    "preview": "wrangler deploy --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitwiseAndrea/wordle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BitwiseAndrea/wordle/issues"
+  },
+  "homepage": "https://github.com/BitwiseAndrea/wordle#readme"
+}

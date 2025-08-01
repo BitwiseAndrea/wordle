@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Wordle Bot</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div class="container">
@@ -30,6 +30,7 @@
             <br>
             <button class="btn" onclick="solveWordle()" id="solveBtn">🚀 Let Bot Solve It!</button>
             <button class="btn" onclick="resetGame()" style="background: linear-gradient(145deg, #f44336, #d32f2f);">🔄 Reset</button>
+            <button class="btn" onclick="window.location.href='/tests'" style="background: linear-gradient(145deg, #4caf50, #388e3c);">🧪 Run Tests</button>
         </div>
 
         <div id="gameBoard" class="game-board">
@@ -47,7 +48,7 @@
         </div>
     </div>
 
-    <script src="wordle-bot.js"></script>
-    <script src="main.js"></script>
+    <script src="/wordle-bot.js"></script>
+    <script src="/main.js"></script>
 </body>
 </html> 

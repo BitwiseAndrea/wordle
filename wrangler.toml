@@ -1,0 +1,14 @@
+name = "wordle-bot"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Rules for importing different file types
+rules = [
+  { type = "Text", globs = ["**/*.html", "**/*.css", "**/*.js"], fallthrough = true }
+]
+
+[env.production]
+name = "wordle-bot"
+
+[env.dev]
+name = "wordle-bot-dev" 

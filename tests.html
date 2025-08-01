@@ -4,39 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle Bot Tests</title>
+    <link rel="stylesheet" href="/styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
         .test-section {
             margin: 20px 0;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             background: #fafafa;
-        }
-
-        .test-section h3 {
-            margin-top: 0;
-            color: #2c3e50;
         }
 
         .test-result {
@@ -70,20 +45,6 @@
             margin: 10px 0;
         }
 
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
         .summary {
             font-size: 18px;
             font-weight: bold;
@@ -111,6 +72,7 @@
         <div style="text-align: center; margin: 20px 0;">
             <button onclick="runAllTests()">🚀 Run All Tests</button>
             <button onclick="clearResults()">🗑️ Clear Results</button>
+            <button onclick="window.location.href='/'">🏠 Back to Main</button>
         </div>
 
         <div id="testResults"></div>
@@ -118,7 +80,7 @@
         <div id="summary" style="display: none;"></div>
     </div>
 
-    <script src="wordle-bot.js"></script>
-    <script src="tests.js"></script>
+    <script src="/wordle-bot.js"></script>
+    <script src="/tests.js"></script>
 </body>
 </html> 

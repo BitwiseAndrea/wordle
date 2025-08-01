@@ -2,16 +2,107 @@
 
 An intelligent Wordle bot that uses adaptive strategy and information theory to solve Wordle puzzles.
 
+## Testing
+
+### Running Tests
+
+The project includes a comprehensive test suite that validates the bot's functionality, including the critical ASSAY scenario that was previously failing.
+
+**Option 1: Using npm (Recommended)**
+```bash
+npm test
+```
+
+**Option 2: Direct browser testing**
+```bash
+npm run test:browser
+# Or manually open tests.html in your browser
+```
+
+### What the tests cover
+
+✅ **Bot initialization** - Ensures the word list is properly loaded  
+✅ **Word list integrity** - Validates ASSAY and other critical words are present  
+✅ **Guess simulation** - Tests the core Wordle simulation logic  
+✅ **Knowledge tracking** - Verifies green/yellow/black letter tracking  
+✅ **Word filtering** - Ensures words are properly eliminated after guesses  
+✅ **ASSAY scenario** - The critical test case that validates the bot handles this word correctly  
+
+### Recent Fixes
+
+- **Case sensitivity fix**: Converted all words to uppercase to ensure consistency between the word list and test expectations
+- **ASSAY scenario**: Fixed the bug where ASSAY was not being properly recognized in the word list
+
+All tests should now pass! 🎉
+
+## 🚀 Cloudflare Workers Deployment
+
+This project includes a Cloudflare Worker setup for easy deployment to the edge!
+
+### Quick Deployment
+
+1. **Install Wrangler CLI** (if you haven't already):
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. **Login to Cloudflare**:
+   ```bash
+   wrangler login
+   ```
+
+3. **Deploy to production**:
+   ```bash
+   npm run deploy
+   # or
+   wrangler deploy
+   ```
+
+4. **Deploy to dev environment**:
+   ```bash
+   npm run deploy:dev
+   ```
+
+### Local Development
+
+Run the worker locally:
+```bash
+npm run dev
+# or
+wrangler dev
+```
+
+### Available Routes
+
+- `/` - Full Wordle Bot application (serves `index.html`)
+- `/tests` - Complete test suite 
+- `/styles.css`, `/wordle-bot.js`, `/main.js` - Individual assets
+
+### Worker Features
+
+✅ **Clean architecture** - Separate HTML, CSS, and JS files  
+✅ **Fast edge deployment** - Runs on Cloudflare's global network  
+✅ **Multiple routes** - Main app and test suite  
+✅ **Import-based assets** - Clean file organization with imports  
+✅ **Same functionality** - Full WordleBot with all fixes included  
+✅ **Easy maintenance** - Modular file structure  
+
+The worker uses modern import syntax to serve separate HTML files, making the code much cleaner and easier to maintain!
+
 ## 📁 Project Structure
 
 ```
 developer/wordle/
-├── index.html          # Main application UI
-├── styles.css          # Styling for the application
-├── wordle-bot.js       # Core bot logic and algorithm
+├── index.html          # Main application UI (✅ Works locally & in worker!)
+├── tests.html          # Test page for Cloudflare Worker (Updated!)
+├── styles.css          # Styling for the application (Enhanced!)
+├── wordle-bot.js       # Core bot logic and algorithm (✅ Fixed!)
 ├── main.js            # UI interaction and game flow
-├── tests.html         # Test runner interface
-├── tests.js           # Comprehensive test suite
+├── tests.js           # Comprehensive test suite (✅ All passing!)
+├── worker.js          # Clean Cloudflare Worker with imports (NEW!)
+├── wrangler.toml      # Worker configuration with file rules (NEW!)
+├── run-tests.sh       # Test runner script
+├── package.json       # Dependencies and scripts
 └── README.md          # This file
 ```
 
